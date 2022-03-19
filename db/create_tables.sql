@@ -2,27 +2,27 @@ CREATE DATABASE grading_platform;
 USE grading_platform;
 
 CREATE TABLE Course
-([id] [int] not null,
-[name] [varchar](255) not null,
-[syllabus] [varchar](255)not null,
-[year] [int] not null,
-[semester] [int] not null,
+(id INT NOT NULL,
+name VARCHAR(255) NOT NULL,
+syllabus VARCHAR(255) NOT NULL,
+year INT NOT NULL,
+semester INT NOT NULL,
 primary key(id)
 );
 
-CREATE TABLE Students
-([id] [int] not null,
-[name] [varchar](255) not null,
-[year of registration] [int] not null,
-[semester] [int] not null,
-primary key(id),
+CREATE TABLE Student
+(id INT NOT NULL,
+name VARCHAR(255) NOT NULL,
+year_of_registration INT NOT NULL,
+semester INT NOT NULL,
+primary key(id)
 );
 
 CREATE TABLE Enrolled
-([idS] [int] not null,
- [idC] [int] not null,
- [Project Grade] [int] not null,
- [Student Grade] [int] not null,
- foreign key(idS) references Students(id) ON DELETE CASCADE ,	--LEFT TO DELETE 
- foreign key(idC) references Curse(id) ON DELETE CASCADE ,	--LEFT TO DELETE 
+(idS INT NOT NULL,
+ idC INT NOT NULL,
+ project_grade INT NOT NULL,
+ final_exam_grade INT NOT NULL,
+ foreign key(idS) REFERENCES Student(id) ON DELETE CASCADE ,	 
+ foreign key(idC) REFERENCES Course(id) ON DELETE CASCADE 	
 );
