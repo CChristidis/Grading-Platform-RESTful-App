@@ -10,7 +10,7 @@ semester INT NOT NULL,
 primary key(id)
 );
 
-CREATE TABLE student-registration
+CREATE TABLE student_registration
 (id INT NOT NULL AUTO_INCREMENT,
 name VARCHAR(255) NOT NULL,
 year_of_registration INT NOT NULL,
