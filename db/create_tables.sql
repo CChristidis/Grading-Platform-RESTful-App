@@ -13,8 +13,10 @@ primary key(id)
 
 CREATE TABLE student_registration
 (
+idC INT NOT NULL,
 name VARCHAR(255) NOT NULL,
 year_of_registration INT NOT NULL,
 semester INT NOT NULL,
-foreign key(idC) REFERENCES course(id) ON DELETE CASCADE 	
+foreign key(idC) REFERENCES course(id) ON DELETE CASCADE,
+primary key(idC)
 );
