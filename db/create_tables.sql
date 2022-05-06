@@ -23,6 +23,6 @@ CREATE TABLE enrolled
  idC INT NOT NULL,
  project_grade FLOAT NOT NULL,
  final_exam_grade FLOAT NOT NULL,
- foreign key(idS) REFERENCES Student(id) ON DELETE CASCADE ,	 
- foreign key(idC) REFERENCES Course(id) ON DELETE CASCADE 	
+ foreign key(idS) REFERENCES student_registration(id) ON DELETE CASCADE ,	 
+ foreign key(idC) REFERENCES course(id) ON DELETE CASCADE 	
 );
