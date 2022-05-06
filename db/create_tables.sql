@@ -5,6 +5,7 @@ CREATE TABLE course
 (id INT NOT NULL AUTO_INCREMENT,
 name VARCHAR(255) NOT NULL,
 syllabus VARCHAR(255) NOT NULL,
+instructor_login VARCHAR(255) NOT NULL, 
 year INT NOT NULL,
 semester INT NOT NULL,
 primary key(id)
