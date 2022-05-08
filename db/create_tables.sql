@@ -18,8 +18,10 @@ idC INT NOT NULL,
 name VARCHAR(255) NOT NULL,
 year_of_registration INT NOT NULL,
 semester INT NOT NULL,
+project_grade DOUBLE,
+final_exams_grade DOUBLE,
 foreign key(idC) REFERENCES course(id) ON DELETE CASCADE,
-primary key(idC, id)
+primary key(id)
 );
 
 INSERT INTO `course` VALUES 
