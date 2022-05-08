@@ -30,9 +30,9 @@ INSERT INTO `course` VALUES
 	(3,'course3','syllabus','avani@luv2code.com', 2022, 5);
   
 INSERT INTO `student_registration` VALUES 
-	(1, 1,'christos', 2021,5),
-	(2, 2,'nikos',1993,5),
-	(3, 3,'giannhs',1994, 5);
+	(1, 1,'christos', 2021,5, 0.0, 0.0),
+	(2, 2,'nikos',1993,5, 0.0, 0.0),
+	(3, 3,'giannhs',1994, 5, 0.0, 0.0);
   
 
 
