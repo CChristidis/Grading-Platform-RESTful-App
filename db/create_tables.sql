@@ -49,7 +49,7 @@ INSERT INTO users(username, password, enabled)VALUES('christos','heygoodlookin',
 INSERT INTO users(username, password, enabled)VALUES('makis','whatyougotcookin',true);
  
 INSERT INTO authorities(username,authority)VALUES('christos','ROLE_ADMIN');
-insert into authorities(username,authority)values('makis','ROLE_USER');
+insert into authorities(username,authority)VALUES('makis','ROLE_USER');
 
 INSERT INTO `course` VALUES 
 	(1,'course1','syllabus','leslie@luv2code.com', 2022, 5),
