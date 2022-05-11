@@ -45,8 +45,8 @@ CREATE TABLE authorities (
 );
 
 
-INSERT INTO users(username, password, enabled)VALUES('christos','heygoodlookin',true);
-INSERT INTO users(username, password, enabled)VALUES('makis','whatyougotcookin',true);
+INSERT INTO users(username, password, enabled)VALUES('christos',{noop}'heygoodlookin',true);
+INSERT INTO users(username, password, enabled)VALUES('makis','{noop}whatyougotcookin',true);
  
 INSERT INTO authorities(username,authority)VALUES('christos','ROLE_ADMIN');
 insert into authorities(username,authority)VALUES('makis','ROLE_USER');
