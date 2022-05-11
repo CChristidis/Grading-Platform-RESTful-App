@@ -20,7 +20,7 @@ primary key(id)
 CREATE TABLE student_registration
 (
 id INT NOT NULL AUTO_INCREMENT,
-idC INT NOT NULL AUTO_INCREMENT,
+idC INT NOT NULL,
 name VARCHAR(255) NOT NULL,
 year_of_registration INT NOT NULL,
 semester INT NOT NULL,
@@ -45,7 +45,7 @@ CREATE TABLE authorities (
 );
 
 
-INSERT INTO users(username, password, enabled)VALUES('christos',{noop}'heygoodlookin',true);
+INSERT INTO users(username, password, enabled)VALUES('christos','{noop}heygoodlookin',true);
 INSERT INTO users(username, password, enabled)VALUES('makis','{noop}whatyougotcookin',true);
  
 INSERT INTO authorities(username,authority)VALUES('christos','ROLE_ADMIN');
