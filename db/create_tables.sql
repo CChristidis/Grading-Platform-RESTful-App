@@ -28,6 +28,7 @@ year_of_registration INT NOT NULL,
 semester INT NOT NULL,
 project_grade DOUBLE,
 final_exams_grade DOUBLE,
+final_grade DOUBLE,
 foreign key(idC) REFERENCES course(id) ON DELETE CASCADE,
 primary key(id)
 )ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;;
