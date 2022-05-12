@@ -54,9 +54,9 @@ INSERT INTO authorities(username,authority)VALUES('christos','ROLE_ADMIN');
 insert into authorities(username,authority)VALUES('makis','ROLE_USER');
 
 INSERT INTO `course` VALUES 
-	(1,'course1','syllabus','leslie@luv2code.com', 2022, 5),
-	(2,'course2','syllabus','emma@luv2code.com', 2022, 5),
-	(3,'course3','syllabus','avani@luv2code.com', 2022, 5);
+	(1,'course1','syllabus','leslie@luv2code.com', 2022, 5, 0.3, 0.7),
+	(2,'course2','syllabus','emma@luv2code.com', 2022, 5, 0.4, 0.6),
+	(3,'course3','syllabus','avani@luv2code.com', 2022, 5, 0.5, 0.5);
   
 INSERT INTO `student_registration` VALUES 
 	(1, 1,'christos', 2021,5, 0.0, 0.0),
