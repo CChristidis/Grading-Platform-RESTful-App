@@ -14,6 +14,8 @@ syllabus VARCHAR(255) NOT NULL,
 instructor_login VARCHAR(255) NOT NULL, 
 year INT NOT NULL,
 semester INT NOT NULL,
+project_grade_weight DOUBLE NOT NULL,
+final_exams_grade_weight DOUBLE NOT NULL,
 primary key(id)
 )ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;;
 
