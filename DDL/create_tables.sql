@@ -1,6 +1,7 @@
 CREATE DATABASE grading_platform;
 USE grading_platform;
 
+DROP TABLE IF EXISTS `statistic`;
 DROP TABLE IF EXISTS `student_registration`;
 DROP TABLE IF EXISTS `course`;
 DROP TABLE IF EXISTS `authorities`;
@@ -33,7 +34,21 @@ foreign key(idC) REFERENCES course(id) ON DELETE CASCADE,
 primary key(id)
 )ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;;
 
-
+CREATE TABLE statistic
+(
+id INT NOT NULL AUTO_INCREMENT,
+idC INT NOT NULL,
+mean DOUBLE DEFAULT NULL,
+max DOUBLE DEFAULT NULL,
+min DOUBLE DEFAULT NULL,
+std_deviation DOUBLE DEFAULT NULL,
+variance DOUBLE DEFAULT NULL,
+median DOUBLE DEFAULT NULL,
+kurtosis DOUBLE DEFAULT NULL,
+skewness DOUBLE DEFAULT NULL,
+foreign key(idC) REFERENCES course(id) ON DELETE CASCADE,
+primary key(id)
+)ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;;
 
 CREATE TABLE users (
     username varchar(50) not null primary key,
