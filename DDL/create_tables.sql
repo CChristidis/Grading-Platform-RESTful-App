@@ -3,20 +3,30 @@ USE grading_platform;
 
 
 DROP TABLE IF EXISTS `student_registration`;
+DROP TABLE IF EXISTS `authorities`;
 DROP TABLE IF EXISTS `users`;
 DROP TABLE IF EXISTS `course`;
-DROP TABLE IF EXISTS `authorities`;
+
+
+
+CREATE TABLE users (
+    username varchar(50) not null primary key,
+    password varchar(120) not null,
+    enabled boolean not null
+)ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;;
+
 
 
 CREATE TABLE course
 (id INT NOT NULL AUTO_INCREMENT,
 name VARCHAR(255) NOT NULL,
 syllabus VARCHAR(255) NOT NULL,
-instructor_login VARCHAR(255) NOT NULL, 
+instructor_login VARCHAR(50) NOT NULL, 
 year INT NOT NULL,
 semester INT NOT NULL,
 project_grade_weight DOUBLE NOT NULL,
 final_exams_grade_weight DOUBLE NOT NULL,
+foreign key(instructor_login) REFERENCES users(username) ON DELETE CASCADE,
 primary key(id)
 )ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;;
 
@@ -35,19 +45,13 @@ primary key(id)
 )ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;;
 
 
-CREATE TABLE users (
-    username varchar(50) not null primary key,
-    password varchar(120) not null,
-    idC INT NOT NULL,
-    foreign key(idC) REFERENCES course(id) ON DELETE CASCADE,
-    enabled boolean not null
-);
+
 
 CREATE TABLE authorities (
     username varchar(50) not null,
     authority varchar(50) not null,
     foreign key (username) references users (username) ON DELETE CASCADE
-);
+)ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;;
 
 
 INSERT INTO users(username, password, enabled)VALUES('christos','{noop}heygoodlookin',true);
