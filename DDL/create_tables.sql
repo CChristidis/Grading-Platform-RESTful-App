@@ -18,7 +18,7 @@ CREATE TABLE users (
 
 
 CREATE TABLE course
-(id INT NOT NULL AUTO_INCREMENT,
+(id INT NOT NULL,
 name VARCHAR(255) NOT NULL,
 syllabus VARCHAR(255) NOT NULL,
 instructor_login VARCHAR(50) NOT NULL, 
@@ -32,7 +32,7 @@ primary key(id)
 
 CREATE TABLE student_registration
 (
-id INT NOT NULL AUTO_INCREMENT,
+id INT NOT NULL,
 idC INT NOT NULL,
 name VARCHAR(255) NOT NULL,
 year_of_registration INT NOT NULL,
@@ -56,9 +56,12 @@ CREATE TABLE authorities (
 
 INSERT INTO users(username, password, enabled)VALUES('christos','{noop}heygoodlookin',true);
 INSERT INTO users(username, password, enabled)VALUES('makis','{noop}whatyougotcookin',true);
+INSERT INTO users(username, password, enabled)VALUES('nikos','{noop}howsaboutcookinsomethingupwithme',true);
  
 INSERT INTO authorities(username,authority)VALUES('christos','ROLE_ADMIN');
-insert into authorities(username,authority)VALUES('makis','ROLE_USER');
+INSERT INTO authorities(username,authority)VALUES('nikos','ROLE_ADMIN');
+INSERT INTO authorities(username,authority)VALUES('makis','ROLE_USER');
+
 
 INSERT INTO `course` VALUES 
 	(1,'course1','syllabus','christos', 2022, 5, 0.3, 0.7),
