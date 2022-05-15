@@ -18,7 +18,7 @@ CREATE TABLE users (
 
 
 CREATE TABLE course
-(id INT NOT NULL,
+(id INT NOT NULL AUTO_INCREMENT,
 name VARCHAR(255) NOT NULL,
 syllabus VARCHAR(255) NOT NULL,
 instructor_login VARCHAR(50) NOT NULL, 
@@ -32,7 +32,7 @@ primary key(id)
 
 CREATE TABLE student_registration
 (
-id INT NOT NULL,
+id INT NOT NULL AUTO_INCREMENT,
 idC INT NOT NULL,
 name VARCHAR(255) NOT NULL,
 year_of_registration INT NOT NULL,
